@@ -8,7 +8,6 @@ public class Producto {
 	private Categoria categoria;
 
 	public Producto() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Producto(String codigo, String descripcion, double precioUnitario, OrigenFabricacion origenFabricacion,

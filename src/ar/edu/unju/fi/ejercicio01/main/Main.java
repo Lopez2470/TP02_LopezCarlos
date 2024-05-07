@@ -9,7 +9,6 @@ import ar.edu.unju.fi.ejercicio01.model.Producto;
 import ar.edu.unju.fi.ejercicio01.model.Producto.Categoria;
 import ar.edu.unju.fi.ejercicio01.model.Producto.OrigenFabricacion;
 
-
 public class Main {
 	static Scanner scanner= new Scanner(System.in);
 	//List<Producto> productos = new ArrayList<Producto>();
@@ -56,9 +55,7 @@ public class Main {
             } catch (InputMismatchException e) {
                 System.out.println("Error: Debe ingresar numeros enteros.");
                 scanner.nextLine(); 
-            }   finally {
-                
-            }
+            }   
         }
         scanner.close();
 	}
@@ -181,8 +178,7 @@ public class Main {
         }
 		System.out.println("Origen de Fabricacion elegido: "+origen);
 		return origen;
-	}
-	
+	}	
 	//Ingreso de Categoria
 	static String ingresarCategoria() {
 		String categoria ="";
@@ -196,7 +192,6 @@ public class Main {
     		System.out.println("3- Electro hogar");
     		System.out.println("4- Herramientas");
             System.out.print("Ingrese una opción: ");
-
             try {
                 opcion = scanner.nextByte();
                 scanner.nextLine(); 
@@ -224,8 +219,7 @@ public class Main {
         }
 		System.out.println("Categoria elegida es: "+categoria);
 		return categoria;
-	}
-	
+	}	
 	//Mostrar productos
 	private static void mostrarProductos(List<Producto> productos) {
         if (productos.isEmpty()) {
@@ -251,6 +245,7 @@ public class Main {
 	       	System.out.println(     "Modificar Producto");
 	       	System.out.println("---------------------------");
 	       	String codigoP = ingresarCodigo();
+	       	
 	       	//Buscar el producto
 	       	Producto productoBuscado = buscarProducto(codigoP, productos);
         	if (productoBuscado != null) {
